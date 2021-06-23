@@ -1,4 +1,4 @@
-import Firebase from 'firebase/app'
+import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 
@@ -13,7 +13,9 @@ const config = {
   measurementId: import.meta.env.VITE_APP_MEASUREMENT_ID,
 }
 
-Firebase.initializeApp(config)
+firebase.initializeApp(config)
 
-export const auth = Firebase.auth()
-export const database = Firebase.database()
+const auth = firebase.auth()
+const database = firebase.database()
+
+export { firebase, auth, database }

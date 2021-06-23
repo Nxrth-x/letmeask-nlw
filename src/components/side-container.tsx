@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import IndexImage from '../assets/images/index-image.svg'
+import IndexImage from '../assets/images/illustration.svg'
 import COLORS from '../helpers/colors'
 
 export default function SideContainer() {

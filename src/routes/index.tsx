@@ -1,15 +1,22 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Index from '../pages'
-import CreateRoom from '../pages/create-room'
+
+// Context
+import AuthContextProvider from '../context/AuthContext'
+
+// Pages
+import NewRoom from '../pages/NewRoom'
+import Home from '../pages/Home'
 
 export default function Routes() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/create-room" component={CreateRoom} />
-      </Switch>
+      <AuthContextProvider>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/rooms/new" component={NewRoom} />
+        </Switch>
+      </AuthContextProvider>
     </BrowserRouter>
   )
 }
